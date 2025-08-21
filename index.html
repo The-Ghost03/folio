@@ -72,6 +72,38 @@
 
     <!-- ScrollReveal.js -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section[id]"); // toutes les sections avec un id
+        const navLinks = document.querySelectorAll("#nav-content a");
+
+        function activateMenu() {
+          let current = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 120; // ajuster selon la hauteur du header
+            const sectionHeight = section.offsetHeight;
+
+            if (
+              window.scrollY >= sectionTop &&
+              window.scrollY < sectionTop + sectionHeight
+            ) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + current) {
+              link.classList.add("active");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", activateMenu);
+        activateMenu(); // pour que ça marche dès le chargement
+      });
+    </script>
 
     <style>
       body {
@@ -103,6 +135,28 @@
         visibility: visible;
         opacity: 1;
         transition: opacity 0.5s linear;
+      }
+      /* Style des liens */
+      #nav-content a {
+        position: relative;
+        border-radius: 9999px; /* pill */
+        transition: all 0.3s ease;
+      }
+
+      /* Hover */
+      #nav-content a:hover {
+        background: linear-gradient(90deg, #4f46e5, #a78bfa);
+        color: white !important;
+        box-shadow: 0 0 10px rgba(167, 139, 250, 0.4);
+        transform: translateY(-2px);
+      }
+
+      /* Lien actif (scrollspy) */
+      #nav-content a.active {
+        background: linear-gradient(90deg, #4f46e5, #a78bfa);
+        color: white !important;
+        font-weight: 600;
+        box-shadow: 0 0 20px rgba(79, 70, 229, 0.6);
       }
     </style>
   </head>
@@ -315,77 +369,79 @@
           <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
             Expérience Professionnelle
           </h2>
-          <div class="relative wrap overflow-hidden p-10 h-full">
+          <div class="relative">
+            <!-- Vertical Line -->
             <div
-              class="border-2-2 absolute border-opacity-20 border-indigo-700 h-full border"
-              style="left: 50%"
+              class="absolute top-0 h-full w-1 bg-indigo-700 bg-opacity-20 left-4 top-0 md:left-1/2 md:-translate-x-1/2"
             ></div>
 
-            <!-- Expérience 1 -->
-            <div
-              class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 hidden md:block md:w-5/12"></div>
+            <!-- Timeline Item 1 -->
+            <div class="relative mb-12">
+              <!-- Circle -->
               <div
-                class="z-20 flex items-center order-1 bg-indigo-800 shadow-xl w-8 h-8 rounded-full"
+                class="absolute z-10 flex items-center justify-center w-8 h-8 bg-indigo-800 rounded-full shadow-xl left-4 top-1 md:left-1/2 md:-translate-x-1/2"
               >
-                <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+                <h1 class="text-lg font-semibold text-white">1</h1>
               </div>
-              <div
-                class="order-1 glass-effect rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 timeline-card-right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Service Engineer
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100"
-                >
-                  Biolab (03/2023 - Aujourd'hui)
-                </p>
-                <ul class="list-disc list-inside mt-2 text-gray-400">
-                  <li>
-                    Installation et maintenance d'équipements biomédicaux.
-                  </li>
-                  <li>Formation du personnel de laboratoire.</li>
-                  <li>
-                    Gestion du parc informatique et administration système.
-                  </li>
-                </ul>
+              <!-- Card -->
+              <div class="w-full pl-16 md:pl-0 md:w-5/12 md:ml-auto md:pr-8">
+                <div class="glass-effect rounded-lg shadow-xl px-6 py-4">
+                  <h3 class="mb-3 font-bold text-white text-xl md:text-right">
+                    Service Engineer
+                  </h3>
+                  <p
+                    class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 md:text-right"
+                  >
+                    Biolab (03/2023 - Aujourd'hui)
+                  </p>
+                  <ul
+                    class="mt-2 list-disc list-inside text-left text-gray-400"
+                  >
+                    <li>
+                      Installation et maintenance d'équipements biomédicaux.
+                    </li>
+                    <li>Formation du personnel de laboratoire.</li>
+                    <li>
+                      Gestion du parc informatique et administration système.
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
-            <!-- Expérience 2 -->
-            <div
-              class="mb-8 flex flex-col md:flex-row-reverse justify-between items-center w-full left-timeline"
-            >
-              <div class="order-1 hidden md:block md:w-5/12"></div>
+            <!-- Timeline Item 2 -->
+            <div class="relative mb-12">
+              <!-- Circle -->
               <div
-                class="z-20 flex items-center order-1 bg-indigo-800 shadow-xl w-8 h-8 rounded-full"
+                class="absolute z-10 flex items-center justify-center w-8 h-8 bg-indigo-800 rounded-full shadow-xl left-4 top-1 md:left-1/2 md:-translate-x-1/2"
               >
-                <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+                <h1 class="text-lg font-semibold text-white">2</h1>
               </div>
-              <div
-                class="order-1 glass-effect rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 timeline-card-left"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Chief Executive Officer (CEO)
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100"
-                >
-                  Softskills (2023 - Aujourd'hui)
-                </p>
-                <ul class="list-disc list-inside mt-2 text-gray-400">
-                  <li>
-                    Gestion de la relation client et de la stratégie
-                    d'entreprise.
-                  </li>
-                  <li>Conception UI/UX et Web Design.</li>
-                  <li>
-                    Management des ressources humaines et administratives.
-                  </li>
-                  <li>Administration des systèmes et serveurs.</li>
-                </ul>
+              <!-- Card -->
+              <div class="w-full pl-16 md:pl-8 md:w-5/12">
+                <div class="glass-effect rounded-lg shadow-xl px-6 py-4">
+                  <h3 class="mb-3 font-bold text-white text-xl">
+                    Chief Executive Officer (CEO)
+                  </h3>
+                  <p
+                    class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100"
+                  >
+                    Softskills (2023 - Aujourd'hui)
+                  </p>
+                  <ul
+                    class="mt-2 list-disc list-inside text-left text-gray-400"
+                  >
+                    <li>
+                      Gestion de la relation client et de la stratégie
+                      d'entreprise.
+                    </li>
+                    <li>Conception UI/UX et Web Design.</li>
+                    <li>
+                      Management des ressources humaines et administratives.
+                    </li>
+                    <li>Administration des systèmes et serveurs.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -928,10 +984,10 @@
       });
 
       // Script pour le suivit de section avec les liens du menu
+
       document.addEventListener("DOMContentLoaded", function () {
-        // Association menu ↔ sections
         const mapping = {
-          about: ["hero", "about"], // À propos = Hero + About
+          about: ["hero", "about"],
           experience: ["experience"],
           education: ["education"],
           skills: ["skills"],
@@ -939,12 +995,11 @@
           contact: ["contact"],
         };
 
-        const navLinks = document.querySelectorAll("header nav a");
+        const navLinks = document.querySelectorAll("#nav-content a");
 
         function activateMenu() {
           let current = null;
 
-          // Parcours du mapping pour trouver la section visible
           for (const [menuId, sectionIds] of Object.entries(mapping)) {
             for (const sectionId of sectionIds) {
               const section = document.getElementById(sectionId);
@@ -962,11 +1017,10 @@
             if (current) break;
           }
 
-          // Reset & apply active styles
           navLinks.forEach((link) => {
-            link.classList.remove("font-bold", "text-indigo-400");
+            link.classList.remove("active");
             if (link.getAttribute("href") === "#" + current) {
-              link.classList.add("font-bold", "text-indigo-400");
+              link.classList.add("active");
             }
           });
         }
