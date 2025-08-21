@@ -111,8 +111,7 @@
         background-color: #0a192f; /* Navy Blue */
         color: #ccd6f6;
       }
-      .gradient-text,
-      .active-link {
+      .gradient-text {
         background: linear-gradient(90deg, #4f46e5, #a78bfa);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -159,23 +158,6 @@
         font-weight: 600;
         box-shadow: 0 0 20px rgba(79, 70, 229, 0.6);
       }
-
-      /* Animation menu mobile */
-      #nav-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-in-out;
-      }
-      #nav-content.menu-open {
-        max-height: 500px; /* Hauteur suffisante pour afficher tous les liens */
-      }
-      @media (min-width: 1024px) {
-        /* lg breakpoint */
-        #nav-content {
-          max-height: none;
-          overflow: visible;
-        }
-      }
     </style>
   </head>
   <body class="leading-normal tracking-normal">
@@ -209,7 +191,7 @@
         </div>
         <nav
           id="nav-content"
-          class="w-full flex-grow lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 bg-gray-900 lg:bg-transparent text-center p-4 lg:p-0 z-20"
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-900 lg:bg-transparent text-center p-4 lg:p-0 z-20"
         >
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
