@@ -926,6 +926,54 @@
             submitButton.innerHTML = originalButtonText;
           });
       });
+
+      // Script pour le suivit de section avec les liens du menu
+      document.addEventListener("DOMContentLoaded", function () {
+        // Association menu ↔ sections
+        const mapping = {
+          about: ["hero", "about"], // À propos = Hero + About
+          experience: ["experience"],
+          education: ["education"],
+          skills: ["skills"],
+          portfolio: ["portfolio"],
+          contact: ["contact"],
+        };
+
+        const navLinks = document.querySelectorAll("header nav a");
+
+        function activateMenu() {
+          let current = null;
+
+          // Parcours du mapping pour trouver la section visible
+          for (const [menuId, sectionIds] of Object.entries(mapping)) {
+            for (const sectionId of sectionIds) {
+              const section = document.getElementById(sectionId);
+              if (section) {
+                const rect = section.getBoundingClientRect();
+                if (
+                  rect.top <= window.innerHeight / 3 &&
+                  rect.bottom >= window.innerHeight / 3
+                ) {
+                  current = menuId;
+                  break;
+                }
+              }
+            }
+            if (current) break;
+          }
+
+          // Reset & apply active styles
+          navLinks.forEach((link) => {
+            link.classList.remove("font-bold", "text-indigo-400");
+            if (link.getAttribute("href") === "#" + current) {
+              link.classList.add("font-bold", "text-indigo-400");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", activateMenu);
+        activateMenu();
+      });
     </script>
   </body>
 </html>
