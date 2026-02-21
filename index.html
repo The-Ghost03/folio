@@ -7,11 +7,11 @@
 
     <meta
       name="description"
-      content="Portfolio de Konan Franck Schalôm YAO, Ingénieur Réseaux, Analyste SOC, DevSecOps et Manager de Projets Tech."
+      content="Portfolio de Konan Franck Schalôm YAO, Ingénieur Réseaux, Analyste SOC, DevSecOps et Service Engineer Biomédical."
     />
     <meta
       name="keywords"
-      content="Ingénieur Réseaux, DevSecOps, SOC Analyst, Cybersécurité, Automatisation, n8n, Python, Docker, Portfolio, Konan Franck Schalôm YAO"
+      content="Ingénieur Réseaux, DevSecOps, SOC Analyst, Cybersécurité, Ingénieur Biomédical, Automatisation, n8n, Python, Docker, Portfolio, Konan Franck Schalôm YAO"
     />
     <meta name="author" content="Konan Franck Schalôm YAO" />
 
@@ -28,6 +28,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="style.css" />
 
     <script>
       tailwind.config = {
@@ -56,45 +58,30 @@
         },
       };
     </script>
-
-    <style>
-      body {
-        background-color: #0f172a;
-        color: #94a3b8;
-      }
-
-      /* Effet Spotlight de la souris */
-      .spotlight {
-        pointer-events: none;
-        position: fixed;
-        inset: 0;
-        z-index: 30;
-        transition: background 0.3s ease;
-        background: radial-gradient(
-          600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
-          rgba(29, 78, 216, 0.15),
-          transparent 80%
-        );
-      }
-
-      /* Styles de navigation actifs */
-      .nav-indicator {
-        transition: all 0.2s ease-in-out;
-      }
-      .nav-link.active .nav-indicator {
-        width: 4rem;
-        background-color: #cbd5e1;
-      }
-      .nav-link.active .nav-text {
-        color: #cbd5e1;
-      }
-    </style>
   </head>
 
   <body
     class="leading-relaxed antialiased selection:bg-teal-300 selection:text-teal-900"
   >
     <div class="spotlight"></div>
+
+    <div
+      class="fixed top-4 right-4 z-50 flex gap-2 rounded-full bg-slate-800/80 px-4 py-2 backdrop-blur border border-slate-700 shadow-lg"
+    >
+      <button
+        id="btn-fr"
+        class="text-teal-300 font-bold text-sm tracking-widest transition-colors"
+      >
+        FR
+      </button>
+      <span class="text-slate-500 font-bold">|</span>
+      <button
+        id="btn-en"
+        class="text-slate-400 hover:text-teal-300 font-bold text-sm tracking-widest transition-colors"
+      >
+        EN
+      </button>
+    </div>
 
     <div
       class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0"
@@ -112,12 +99,25 @@
             <h2
               class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl"
             >
-              Ingénieur Réseaux, DevSecOps & Manager Tech
+              <span class="lang-fr"
+                >Ingénieur Réseaux, DevSecOps & Service Engineer
+                Biomédical</span
+              >
+              <span class="lang-en hidden"
+                >Network Engineer, DevSecOps & Biomedical Service Engineer</span
+              >
             </h2>
             <p class="mt-4 max-w-xs leading-normal">
-              Je conçois des architectures systèmes sécurisées et développe des
-              solutions d'automatisation propulsées par l'Intelligence
-              Artificielle.
+              <span class="lang-fr"
+                >Je conçois des architectures sécurisées, développe des
+                solutions d'automatisation IA et assure l'intégration
+                d'équipements biomédicaux de pointe.</span
+              >
+              <span class="lang-en hidden"
+                >I design secure architectures, develop AI automation solutions,
+                and ensure the integration of cutting-edge biomedical
+                equipment.</span
+              >
             </p>
 
             <nav class="nav hidden lg:block mt-16 w-max">
@@ -132,8 +132,10 @@
                     ></span>
                     <span
                       class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
-                      >À propos</span
                     >
+                      <span class="lang-fr">À propos</span>
+                      <span class="lang-en hidden">About</span>
+                    </span>
                   </a>
                 </li>
                 <li>
@@ -146,8 +148,10 @@
                     ></span>
                     <span
                       class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
-                      >Expérience & Formations</span
                     >
+                      <span class="lang-fr">Expérience & Formations</span>
+                      <span class="lang-en hidden">Experience & Education</span>
+                    </span>
                   </a>
                 </li>
                 <li>
@@ -160,8 +164,10 @@
                     ></span>
                     <span
                       class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
-                      >Projets</span
                     >
+                      <span class="lang-fr">Projets</span>
+                      <span class="lang-en hidden">Projects</span>
+                    </span>
                   </a>
                 </li>
               </ul>
@@ -208,7 +214,8 @@
                 class="block text-sm font-semibold hover:text-slate-200 transition-colors"
                 aria-label="CV"
               >
-                [ Voir mon Portfolio CV ]
+                <span class="lang-fr">[ Voir mon Portfolio CV ]</span>
+                <span class="lang-en hidden">[ View my Resume ]</span>
               </a>
             </li>
           </ul>
@@ -226,40 +233,92 @@
               <h2
                 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
               >
-                À propos
+                <span class="lang-fr">À propos</span>
+                <span class="lang-en hidden">About</span>
               </h2>
             </div>
             <div>
               <p class="mb-4">
-                Passionné par l'intersection entre l'administration système, la
-                cybersécurité et l'automatisation, je suis un ingénieur
-                polyvalent basé à Abidjan. En finalisant mon
-                <strong class="font-medium text-slate-200"
-                  >Master en Cybersécurité & IoT</strong
-                >, je m'applique à concevoir des architectures robustes et
-                résilientes face aux menaces actuelles.
-              </p>
-              <p class="mb-4">
-                Aujourd'hui, mon expertise s'articule autour de la création
-                d'outils de sécurité (NIDS) avec
-                <strong class="font-medium text-slate-200">Python</strong>, la
-                conteneurisation via
-                <strong class="font-medium text-slate-200">Docker</strong>, et
-                l'automatisation de workflows complexes via
-                <strong class="font-medium text-slate-200">n8n</strong>.
-                J'intègre fréquemment des modèles de
-                <strong class="font-medium text-slate-200"
-                  >LLM auto-hébergés</strong
+                <span class="lang-fr"
+                  >Passionné par l'intersection entre l'administration système,
+                  la cybersécurité et l'ingénierie biomédicale, je suis un
+                  profil polyvalent basé à Abidjan. En finalisant mon
+                  <strong class="font-medium text-slate-200"
+                    >Master en Cybersécurité & IoT</strong
+                  >, je m'applique à concevoir des architectures robustes et
+                  résilientes face aux menaces actuelles.</span
                 >
-                pour optimiser le traitement des données tout en garantissant
-                leur souveraineté.
+                <span class="lang-en hidden"
+                  >Passionate about the intersection of system administration,
+                  cybersecurity, and biomedical engineering, I am a versatile
+                  professional based in Abidjan. Currently finishing my
+                  <strong class="font-medium text-slate-200"
+                    >Master's in Cybersecurity & IoT</strong
+                  >, I strive to design robust and resilient architectures
+                  against modern threats.</span
+                >
               </p>
-              <p>
-                Que ce soit pour assurer le support d'équipements biomédicaux,
-                gérer des serveurs VPS ou diriger ma propre structure
-                (Softskills), mon approche reste la même : identifier le
-                problème, automatiser la solution, et sécuriser le processus.
-              </p>
+
+              <div id="about-more" class="hidden">
+                <p class="mb-4 mt-4">
+                  <span class="lang-fr"
+                    >Mon expertise s'articule sur deux axes majeurs : d'une
+                    part, le
+                    <strong class="font-medium text-slate-200"
+                      >support technique d'équipements biomédicaux</strong
+                    >
+                    (installation et maintenance de systèmes Roche, Merck,
+                    Illumina dans les laboratoires) ; d'autre part, la
+                    conteneurisation via
+                    <strong class="font-medium text-slate-200">Docker</strong>,
+                    et l'automatisation de workflows via
+                    <strong class="font-medium text-slate-200">n8n</strong> et
+                    des modèles d'IA auto-hébergés.</span
+                  >
+                  <span class="lang-en hidden"
+                    >My expertise revolves around two main areas: on one hand,
+                    <strong class="font-medium text-slate-200"
+                      >technical support for biomedical equipment</strong
+                    >
+                    (installation and maintenance of Roche, Merck, and Illumina
+                    systems in laboratories); on the other hand, the
+                    containerization via
+                    <strong class="font-medium text-slate-200">Docker</strong>,
+                    and workflow automation via
+                    <strong class="font-medium text-slate-200">n8n</strong> and
+                    self-hosted AI models.</span
+                  >
+                </p>
+                <p>
+                  <span class="lang-fr"
+                    >Que ce soit pour assurer le bon fonctionnement du parc
+                    informatique, d'un laboratoire d'analyse médicale ou pour
+                    diriger les projets numériques de ma propre agence
+                    (Softskills), mon approche reste la même : identifier le
+                    besoin, automatiser la solution, et sécuriser le
+                    processus.</span
+                  >
+                  <span class="lang-en hidden"
+                    >Whether ensuring the smooth operation of a medical analysis
+                    laboratory's or IT infrastructure or managing digital
+                    projects for my own agency (Softskills), my approach remains
+                    the same: identify the need, automate the solution, and
+                    secure the process.</span
+                  >
+                </p>
+              </div>
+
+              <button
+                id="read-more-btn"
+                class="mt-4 flex items-center gap-2 text-sm font-semibold text-teal-300 hover:text-teal-400 transition-colors focus:outline-none"
+              >
+                <span class="lang-fr text-toggle">Lire plus</span>
+                <span class="lang-en hidden text-toggle">Read more</span>
+                <i
+                  id="read-more-icon"
+                  class="fas fa-chevron-down transition-transform duration-300"
+                ></i>
+              </button>
             </div>
           </section>
 
@@ -274,7 +333,8 @@
               <h2
                 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
               >
-                Expérience & Formations
+                <span class="lang-fr">Expérience & Formations</span>
+                <span class="lang-en hidden">Experience & Education</span>
               </h2>
             </div>
 
@@ -289,7 +349,8 @@
                   <header
                     class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
                   >
-                    03/2023 — Présent
+                    <span class="lang-fr">03/2023 — Présent</span>
+                    <span class="lang-en hidden">03/2023 — Present</span>
                   </header>
                   <div class="z-10 sm:col-span-6">
                     <h3 class="font-medium leading-tight text-slate-200">
@@ -310,12 +371,23 @@
                       </div>
                     </h3>
                     <p class="mt-2 text-sm leading-normal">
-                      Chargé d'installer et de faire l'entretien et le suivi des
-                      équipements Roche, Merck, Illumina dans les laboratoires
-                      d'analyse biomédicale. Assistance au personnel de
-                      laboratoire à l'utilisation des équipements. Responsable
-                      de la gestion du parc informatique de l'entreprise.
-                      Administrateur système d'information et serveur.
+                      <span class="lang-fr"
+                        >Chargé d'installer et de faire l'entretien et le suivi
+                        des équipements Roche, Merck, Illumina dans les
+                        laboratoires d'analyse biomédicale. <br />
+                        Assistance au personnel de laboratoire à l'utilisation
+                        des équipements. <br />Responsable de la gestion du parc
+                        informatique de l'entreprise. Administrateur système
+                        d'information et serveur.</span
+                      >
+                      <span class="lang-en hidden"
+                        >Responsible for installing, maintaining, and monitoring
+                        Roche, Merck, and Illumina equipment in biomedical
+                        analysis laboratories. <br />Assisting laboratory staff
+                        in using the equipment. <br />Managing the company's IT
+                        infrastructure. Information system and server
+                        administrator.</span
+                      >
                     </p>
                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies">
                       <li class="mr-1.5 mt-2">
@@ -329,7 +401,10 @@
                         <div
                           class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
                         >
-                          Support Biomédical
+                          <span class="lang-fr">Équipements Biomédicaux</span
+                          ><span class="lang-en hidden"
+                            >Biomedical Equipment</span
+                          >
                         </div>
                       </li>
                     </ul>
@@ -347,7 +422,8 @@
                   <header
                     class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
                   >
-                    2023 — Présent
+                    <span class="lang-fr">2023 — Présent</span>
+                    <span class="lang-en hidden">2023 — Present</span>
                   </header>
                   <div class="z-10 sm:col-span-6">
                     <h3 class="font-medium leading-tight text-slate-200">
@@ -360,16 +436,31 @@
                           <span
                             class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
                           ></span>
-                          <span
-                            >Chef de Projet et Graphic Designer ·
-                            <span class="inline-block">Softskills</span></span
-                          >
+                          <span>
+                            <span class="lang-fr"
+                              >Chef de Projet et Graphic Designer</span
+                            >
+                            <span class="lang-en hidden"
+                              >Project Manager & Graphic Designer</span
+                            >
+                            · <span class="inline-block">Softskills</span>
+                          </span>
                         </a>
                       </div>
                     </h3>
                     <p class="mt-2 text-sm leading-normal">
-                      Responsable administratif et chef de projet numérique.
-                      Administration Système et Serveur. UI/UX and Web Designer.
+                      <span class="lang-fr"
+                        >Responsable administratif et chef de projet numé<rique
+                          class="br"
+                        ></rique>
+                        Administration Système et Serveur. <br />UI/UX and Web
+                        Designer.</span
+                      >
+                      <span class="lang-en hidden"
+                        >Administrative manager and digital project manager.
+                        <br />System and Server Administration. <br />UI/UX and
+                        Web Designer.</span
+                      >
                     </p>
                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies">
                       <li class="mr-1.5 mt-2">
@@ -383,7 +474,7 @@
                         <div
                           class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
                         >
-                          n8n (Automatisation)
+                          n8n
                         </div>
                       </li>
                       <li class="mr-1.5 mt-2">
@@ -402,24 +493,28 @@
             <h3
               class="mt-8 text-sm font-bold uppercase tracking-widest text-slate-200 mb-6"
             >
-              Formation & Certifications
+              <span class="lang-fr">Formation & Certifications</span>
+              <span class="lang-en hidden">Education & Certifications</span>
             </h3>
             <ol class="group/list">
               <li class="mb-6">
                 <div
                   class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
                 >
-                  <div
-                    class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50"
-                  ></div>
                   <header
                     class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
                   >
-                    2024 — Présent
+                    <span class="lang-fr">2024 — Présent</span>
+                    <span class="lang-en hidden">2024 — Present</span>
                   </header>
                   <div class="z-10 sm:col-span-6">
                     <h3 class="font-medium leading-tight text-slate-200">
-                      Master Cybersécurité et Internet des Objets (CIO)
+                      <span class="lang-fr"
+                        >Master Cybersécurité et Internet des Objets (CIO)</span
+                      >
+                      <span class="lang-en hidden"
+                        >Master's in Cybersecurity and IoT</span
+                      >
                     </h3>
                     <p class="mt-1 text-sm text-slate-400">
                       Université Virtuelle de Côte d'Ivoire
@@ -431,9 +526,6 @@
                 <div
                   class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
                 >
-                  <div
-                    class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50"
-                  ></div>
                   <header
                     class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
                   >
@@ -441,7 +533,12 @@
                   </header>
                   <div class="z-10 sm:col-span-6">
                     <h3 class="font-medium leading-tight text-slate-200">
-                      Licence Réseaux et Sécurité Informatique (RSI)
+                      <span class="lang-fr"
+                        >Licence Réseaux et Sécurité Informatique (RSI)</span
+                      >
+                      <span class="lang-en hidden"
+                        >Bachelor's in Network and IT Security (RSI)</span
+                      >
                     </h3>
                     <p class="mt-1 text-sm text-slate-400">
                       Université Virtuelle de Côte d'Ivoire
@@ -453,9 +550,6 @@
                 <div
                   class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
                 >
-                  <div
-                    class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50"
-                  ></div>
                   <header
                     class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
                   >
@@ -463,7 +557,8 @@
                   </header>
                   <div class="z-10 sm:col-span-6">
                     <h3 class="font-medium leading-tight text-slate-200">
-                      Licence Anglais
+                      <span class="lang-fr">Licence Anglais</span>
+                      <span class="lang-en hidden">Bachelor's in English</span>
                     </h3>
                     <p class="mt-1 text-sm text-slate-400">
                       Université Félix Houphouët-Boigny
@@ -475,9 +570,6 @@
                 <div
                   class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
                 >
-                  <div
-                    class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50"
-                  ></div>
                   <header
                     class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
                   >
@@ -494,11 +586,11 @@
                       >
                       <br />
                       <span class="text-slate-200 font-medium"
-                        >Remote Service Technology Training (customized)</span
+                        >Remote Service Technology Training (Roche)</span
                       >
                       <br />
                       <span class="text-slate-200 font-medium"
-                        >cobas c 111 Service Training (customized)</span
+                        >cobas c 111 Service Training (Roche)</span
                       >
                     </p>
                   </div>
@@ -518,7 +610,8 @@
               <h2
                 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
               >
-                Projets
+                <span class="lang-fr">Projets</span>
+                <span class="lang-en hidden">Projects</span>
               </h2>
             </div>
             <ul class="group/list">
@@ -549,22 +642,38 @@
                         <span
                           class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
                         ></span>
-                        <span
-                          >Agent IA de Prospection IT (Veille & Recrutement)
+                        <span>
+                          <span class="lang-fr"
+                            >Agent IA de Prospection IT (Veille &
+                            Recrutement)</span
+                          >
+                          <span class="lang-en hidden"
+                            >IT Prospecting AI Agent (Watch & Recruitment)</span
+                          >
                           <i
                             class="fas fa-arrow-right ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1"
-                          ></i
-                        ></span>
+                          ></i>
+                        </span>
                       </a>
                     </h3>
                     <p class="mt-2 text-sm leading-normal">
-                      Intégration de l'API REST JSearch (via RapidAPI) dans n8n
-                      pour l'extraction automatisée et le filtrage avancé
-                      d'offres d'emploi ciblées (SOC, Réseaux, Système).
-                      Développement de scripts JavaScript (Node.js) pour
-                      structurer les données entrantes (parsing JSON) et croiser
-                      dynamiquement les exigences des postes avec les
-                      compétences du profil candidat.
+                      <span class="lang-fr"
+                        >Intégration de l'API REST JSearch (via RapidAPI) dans
+                        n8n pour l'extraction automatisée et le filtrage avancé
+                        d'offres d'emploi ciblées (SOC, Réseaux, Système).
+                        Développement de scripts JavaScript (Node.js) pour
+                        structurer les données entrantes (parsing JSON) et
+                        croiser dynamiquement les exigences des postes avec les
+                        compétences du profil candidat.</span
+                      >
+                      <span class="lang-en hidden"
+                        >Integration of the JSearch REST API (via RapidAPI) into
+                        n8n for automated extraction and advanced filtering of
+                        targeted job offers (SOC, Networks, System). Development
+                        of JavaScript (Node.js) scripts to structure incoming
+                        data (JSON parsing) and dynamically cross-reference job
+                        requirements with candidate profile skills.</span
+                      >
                     </p>
                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies">
                       <li class="mr-1.5 mt-2">
@@ -613,32 +722,58 @@
                         <span
                           class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
                         ></span>
-                        <span
-                          >Agent IA Softskills
+                        <span>
+                          <span class="lang-fr">Agent IA Softskills</span>
+                          <span class="lang-en hidden"
+                            >Softskills AI Agent</span
+                          >
                           <i
                             class="fas fa-arrow-right ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1"
-                          ></i
-                        ></span>
+                          ></i>
+                        </span>
                       </a>
                     </h3>
                     <p class="mt-1 text-sm font-semibold text-teal-300">
-                      Automatisation, Orchestration & Conteneurisation
+                      <span class="lang-fr"
+                        >Automatisation, Orchestration & Conteneurisation</span
+                      >
+                      <span class="lang-en hidden"
+                        >Automation, Orchestration & Containerization</span
+                      >
                     </p>
                     <ul
                       class="mt-2 list-disc list-inside text-sm leading-normal text-slate-400"
                     >
                       <li>
-                        n8n, intégration d'API REST (RapidAPI, Google Workspace,
-                        WhatsApp Business), conception de workflows complexes.
+                        <span class="lang-fr"
+                          >n8n, intégration d'API REST (RapidAPI, Google
+                          Workspace, WhatsApp Business), conception de workflows
+                          complexes.</span
+                        ><span class="lang-en hidden"
+                          >n8n, REST API integration (RapidAPI, Google
+                          Workspace, WhatsApp Business), design of complex
+                          workflows.</span
+                        >
                       </li>
                       <li>
-                        Déploiement et intégration d'IA locales (Ollama,
-                        Mistral), ingénierie de prompt pour l'automatisation de
-                        tâches.
+                        <span class="lang-fr"
+                          >Déploiement et intégration d'IA locales (Ollama,
+                          Mistral), ingénierie de prompt pour l'automatisation
+                          de tâches.</span
+                        ><span class="lang-en hidden"
+                          >Deployment and integration of local AIs (Ollama,
+                          Mistral), prompt engineering for task
+                          automation.</span
+                        >
                       </li>
                       <li>
-                        JavaScript (Node.js) appliqué à l'automatisation des
-                        données.
+                        <span class="lang-fr"
+                          >JavaScript (Node.js) appliqué à l'automatisation des
+                          données.</span
+                        ><span class="lang-en hidden"
+                          >JavaScript (Node.js) applied to data
+                          automation.</span
+                        >
                       </li>
                     </ul>
                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies">
@@ -688,44 +823,53 @@
                         <span
                           class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
                         ></span>
-                        <span
-                          >NetGuard Pro (NIDS Distribué)
+                        <span>
+                          <span class="lang-fr"
+                            >NetGuard Pro (NIDS Distribué)</span
+                          >
+                          <span class="lang-en hidden"
+                            >NetGuard Pro (Distributed NIDS)</span
+                          >
                           <i
                             class="fas fa-arrow-right ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1"
-                          ></i
-                        ></span>
+                          ></i>
+                        </span>
                       </a>
                     </h3>
                     <p class="mt-2 text-sm leading-normal">
-                      Conception d'un serveur centralisé avec FastAPI et
-                      SQLAlchemy (PostgreSQL) pour gérer la communication TCP
-                      concurrente et asynchrone entre plusieurs agents.
-                      Développement d'agents de supervision en Python utilisant
-                      Scapy pour capturer le trafic et détecter les anomalies
-                      réseau en temps réel, telles que les attaques SYN Flood et
-                      les scans de ports. Déploiement de l'infrastructure via
-                      des conteneurs Docker.
+                      <span class="lang-fr"
+                        >Conception d'un serveur centralisé avec FastAPI et
+                        SQLAlchemy (PostgreSQL) pour gérer la communication TCP
+                        concurrente et asynchrone entre plusieurs agents.
+                        Développement d'agents de supervision en Python
+                        utilisant Scapy pour capturer le trafic et détecter les
+                        anomalies réseau en temps réel, telles que les attaques
+                        SYN Flood et les scans de ports. Déploiement de
+                        l'infrastructure via des conteneurs Docker.</span
+                      >
+                      <span class="lang-en hidden"
+                        >Design of a centralized server using FastAPI and
+                        SQLAlchemy (PostgreSQL) to manage concurrent and
+                        asynchronous TCP communication between multiple agents.
+                        Development of monitoring agents in Python using Scapy
+                        to capture traffic and detect network anomalies in
+                        real-time, such as SYN Flood attacks and port scans.
+                        Infrastructure deployment via Docker containers.</span
+                      >
                     </p>
                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies">
                       <li class="mr-1.5 mt-2">
                         <div
                           class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
                         >
-                          Programmation Réseau
+                          FastAPI
                         </div>
                       </li>
                       <li class="mr-1.5 mt-2">
                         <div
                           class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
                         >
-                          Détection d'Intrusions
-                        </div>
-                      </li>
-                      <li class="mr-1.5 mt-2">
-                        <div
-                          class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                        >
-                          Architecture Distribuée
+                          Python Scapy
                         </div>
                       </li>
                     </ul>
@@ -765,20 +909,30 @@
                         <span
                           class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
                         ></span>
-                        <span
-                          >Plateforme Web SIHIOTS
+                        <span>
+                          <span class="lang-fr">Plateforme Web SIHIOTS</span>
+                          <span class="lang-en hidden"
+                            >SIHIOTS Web Platform</span
+                          >
                           <i
                             class="fas fa-arrow-right ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1"
-                          ></i
-                        ></span>
+                          ></i>
+                        </span>
                       </a>
                     </h3>
                     <p class="mt-2 text-sm leading-normal">
-                      Conception et pilotage de la création d'une plateforme web
-                      pour la SIHIOTS, incluant un espace membre sécurisé, une
-                      bibliothèque numérique et des parcours de formation.
-                      Impact : Diffusion du savoir médical et engagement de la
-                      communauté scientifique.
+                      <span class="lang-fr"
+                        >Conception et pilotage de la création d'une plateforme
+                        web pour la SIHIOTS, incluant un espace membre sécurisé,
+                        une bibliothèque numérique et des parcours de formation.
+                        Impact : Diffusion du savoir médical.</span
+                      >
+                      <span class="lang-en hidden"
+                        >Design and project management of a web platform for
+                        SIHIOTS, including a secure member area, a digital
+                        research library, and training paths. Impact:
+                        Dissemination of medical knowledge.</span
+                      >
                     </p>
                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies">
                       <li class="mr-1.5 mt-2">
@@ -793,13 +947,6 @@
                           class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
                         >
                           Laravel
-                        </div>
-                      </li>
-                      <li class="mr-1.5 mt-2">
-                        <div
-                          class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                        >
-                          Gestion de Projet
                         </div>
                       </li>
                     </ul>
@@ -839,19 +986,32 @@
                         <span
                           class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
                         ></span>
-                        <span
-                          >Site Vitrine JK LOGISTIQUE
+                        <span>
+                          <span class="lang-fr"
+                            >Site Vitrine JK LOGISTIQUE</span
+                          >
+                          <span class="lang-en hidden"
+                            >JK LOGISTIQUE Corporate Site</span
+                          >
                           <i
                             class="fas fa-arrow-right ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1"
-                          ></i
-                        ></span>
+                          ></i>
+                        </span>
                       </a>
                     </h3>
                     <p class="mt-2 text-sm leading-normal">
-                      Direction du projet de création d'un site vitrine moderne
-                      avec une UX épurée, des formulaires sécurisés et une
-                      stratégie SEO pour une visibilité maximale. Point fort :
-                      Génération de leads qualifiés.
+                      <span class="lang-fr"
+                        >Direction du projet de création d'un site vitrine
+                        moderne avec une UX épurée, des formulaires sécurisés et
+                        une stratégie SEO pour une visibilité maximale. Point
+                        fort : Génération de leads qualifiés.</span
+                      >
+                      <span class="lang-en hidden"
+                        >Directed the creation of a modern showcase website with
+                        clean UX, secure forms, and an SEO strategy for maximum
+                        visibility. Key feature: Qualified lead
+                        generation.</span
+                      >
                     </p>
                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies">
                       <li class="mr-1.5 mt-2">
@@ -868,138 +1028,6 @@
                           SEO
                         </div>
                       </li>
-                      <li class="mr-1.5 mt-2">
-                        <div
-                          class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                        >
-                          React.js
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-
-              <li class="mb-12">
-                <div
-                  class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
-                >
-                  <div
-                    class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
-                  ></div>
-                  <div class="z-10 sm:col-span-2">
-                    <img
-                      alt="ONG HoFa"
-                      loading="lazy"
-                      width="200"
-                      height="48"
-                      class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                      src="img/hofa.webp"
-                      onerror="
-                        this.onerror = null;
-                        this.src =
-                          'https://placehold.co/400x250/1e293b/5eead4?text=ONG+HoFa';
-                      "
-                    />
-                  </div>
-                  <div class="z-10 sm:col-span-6">
-                    <h3>
-                      <a
-                        class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-                        href="https://hofa-ci.org/"
-                        target="_blank"
-                      >
-                        <span
-                          class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
-                        ></span>
-                        <span
-                          >Site Web ONG Hope & Faith (HoFa)
-                          <i
-                            class="fas fa-arrow-right ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1"
-                          ></i
-                        ></span>
-                      </a>
-                    </h3>
-                    <p class="mt-2 text-sm leading-normal">
-                      Pilotage de la conception d'un site institutionnel avec
-                      espace membre, bibliothèque numérique et SEO dynamique
-                      pour accroître la portée de l'ONG. Amélioration de
-                      l'engagement des donateurs.
-                    </p>
-                    <ul class="mt-2 flex flex-wrap" aria-label="Technologies">
-                      <li class="mr-1.5 mt-2">
-                        <div
-                          class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                        >
-                          Gestion de Projet
-                        </div>
-                      </li>
-                      <li class="mr-1.5 mt-2">
-                        <div
-                          class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                        >
-                          Laravel
-                        </div>
-                      </li>
-                      <li class="mr-1.5 mt-2">
-                        <div
-                          class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                        >
-                          React.js
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-
-              <li class="mb-12">
-                <div
-                  class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
-                >
-                  <div
-                    class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
-                  ></div>
-                  <div class="z-10 sm:col-span-2">
-                    <img
-                      alt="Divine Voyage"
-                      loading="lazy"
-                      width="200"
-                      height="48"
-                      class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                      src="img/divine.webp"
-                      onerror="
-                        this.onerror = null;
-                        this.src =
-                          'https://placehold.co/400x250/1e293b/5eead4?text=Divine+Voyage';
-                      "
-                    />
-                  </div>
-                  <div class="z-10 sm:col-span-6">
-                    <h3 class="font-medium leading-tight text-slate-200">
-                      Divine Voyage et Tourisme
-                    </h3>
-                    <p class="mt-2 text-sm leading-normal">
-                      Pilotage du développement d'une plateforme complète de
-                      réservation de voyages (vols, hôtels, voitures) avec
-                      espace client, blog et back-office de gestion.
-                      <em>(En cours de construction)</em>
-                    </p>
-                    <ul class="mt-2 flex flex-wrap" aria-label="Technologies">
-                      <li class="mr-1.5 mt-2">
-                        <div
-                          class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                        >
-                          Web Design
-                        </div>
-                      </li>
-                      <li class="mr-1.5 mt-2">
-                        <div
-                          class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                        >
-                          Gestion de Projet
-                        </div>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1010,39 +1038,6 @@
       </div>
     </div>
 
-    <script>
-      document.addEventListener("mousemove", (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        document.documentElement.style.setProperty("--mouse-x", `${x}px`);
-        document.documentElement.style.setProperty("--mouse-y", `${y}px`);
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".nav-link");
-
-        function activateMenu() {
-          let current = "";
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            if (scrollY >= sectionTop - 200) {
-              current = section.getAttribute("id");
-            }
-          });
-
-          navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === "#" + current) {
-              link.classList.add("active");
-            }
-          });
-        }
-
-        window.addEventListener("scroll", activateMenu);
-        activateMenu();
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

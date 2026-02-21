@@ -1,0 +1,28 @@
+body {
+    background-color: #0f172a;
+    color: #94a3b8;
+}
+
+/* Effet Spotlight de la souris */
+.spotlight {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    transition: background 0.3s ease;
+    background: radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(29, 78, 216, 0.15), transparent 80%);
+}
+
+/* Styles de navigation actifs */
+.nav-indicator {
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link.active .nav-indicator {
+    width: 4rem;
+    background-color: #cbd5e1;
+}
+
+.nav-link.active .nav-text {
+    color: #cbd5e1;
+}
