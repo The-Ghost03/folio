@@ -1,59 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schalôm YAO</title>
+    <title>Schalôm YAO | Ingénieur Réseaux & DevSecOps</title>
 
-    <!-- Meta SEO -->
     <meta
       name="description"
-      content="Portfolio de Konan Franck Schalôm YAO, Ingénieur Réseaux, Manager de Projets Tech et CEO de Softskills. Découvrez mes compétences en gestion de projet, UI/UX design et administration système."
+      content="Portfolio de Konan Franck Schalôm YAO, Ingénieur Réseaux, Analyste SOC, DevSecOps et Manager de Projets Tech. Découvrez mes compétences en cybersécurité, automatisation et administration système."
     />
     <meta
       name="keywords"
-      content="Ingénieur Réseaux, Manager de projet, UI/UX Design, Cybersécurité, Administration Système, Portfolio, Konan Franck Schalôm YAO, Abidjan, Côte d'Ivoire"
+      content="Ingénieur Réseaux, DevSecOps, SOC Analyst, Cybersécurité, Automatisation, n8n, Python, Docker, Portfolio, Konan Franck Schalôm YAO, Abidjan, Côte d'Ivoire"
     />
     <meta name="author" content="Konan Franck Schalôm YAO" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://schalom.softskills.ci/" />
     <meta
       property="og:title"
-      content="Konan Franck Schalôm YAO - Ingénieur Réseaux & Manager de Projets Tech"
+      content="Konan Franck Schalôm YAO - Ingénieur Réseaux & DevSecOps"
     />
     <meta
       property="og:description"
-      content="Portfolio de Konan Franck Schalôm YAO, Ingénieur Réseaux et CEO de Softskills."
+      content="Portfolio de Konan Franck Schalôm YAO, spécialiste en Réseaux, Cybersécurité et Automatisation."
     />
     <meta property="og:image" content="https://i.imgur.com/8b1Z9Q8.jpg" />
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://schalom.softskills.ci/" />
     <meta
       property="twitter:title"
-      content="Konan Franck Schalôm YAO - Ingénieur Réseaux & Manager de Projets Tech"
+      content="Konan Franck Schalôm YAO - Ingénieur Réseaux & DevSecOps"
     />
     <meta
       property="twitter:description"
-      content="Portfolio de Konan Franck Schalôm YAO, Ingénieur Réseaux et CEO de Softskills."
+      content="Portfolio de Konan Franck Schalôm YAO, spécialiste en Réseaux, Cybersécurité et Automatisation."
     />
     <meta property="twitter:image" content="https://i.imgur.com/8b1Z9Q8.jpg" />
 
-    <!-- Favicon
-    <link
-    rel="icon"
-    href="https://img.icons8.com/fluency/48/000000/code.png"
-    type="image/x-icon"
-    />
-    -->
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -61,27 +48,24 @@
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
 
-    <!-- ScrollReveal.js -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll("section[id]"); // toutes les sections avec un id
+        const sections = document.querySelectorAll("section[id]");
         const navLinks = document.querySelectorAll("#nav-content a");
 
         function activateMenu() {
           let current = "";
 
           sections.forEach((section) => {
-            const sectionTop = section.offsetTop - 120; // ajuster selon la hauteur du header
+            const sectionTop = section.offsetTop - 120;
             const sectionHeight = section.offsetHeight;
 
             if (
@@ -101,7 +85,7 @@
         }
 
         window.addEventListener("scroll", activateMenu);
-        activateMenu(); // pour que ça marche dès le chargement
+        activateMenu();
       });
     </script>
 
@@ -125,7 +109,9 @@
       #toast {
         visibility: hidden;
         opacity: 0;
-        transition: visibility 0s 0.5s, opacity 0.5s linear;
+        transition:
+          visibility 0s 0.5s,
+          opacity 0.5s linear;
       }
       #hero {
         padding-left: 15px;
@@ -161,7 +147,6 @@
     </style>
   </head>
   <body class="leading-normal tracking-normal">
-    <!-- Header -->
     <header class="fixed w-full z-30 top-0 text-white glass-effect">
       <div
         class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
@@ -242,12 +227,10 @@
     </header>
 
     <main>
-      <!-- Section Hero -->
       <section id="hero" class="pt-24 md:pt-48">
         <div
           class="container px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center"
         >
-          <!-- Colonne Gauche -->
           <div
             class="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left"
           >
@@ -256,12 +239,12 @@
               <span class="gradient-text">Konan Franck Schalôm YAO</span>
             </h1>
             <h2 class="leading-normal text-2xl mb-8">
-              Ingénieur Réseaux & Manager de Projets Tech
+              Ingénieur Réseaux, DevSecOps & Manager Tech
             </h2>
             <p class="text-xl mb-8">
-              Je pilote des projets technologiques innovants, de la conception
-              UI/UX à l'administration système, en m'appuyant sur une solide
-              expertise en réseaux et sécurité.
+              Je conçois et déploie des architectures réseaux sécurisées et des
+              solutions d'automatisation poussées par l'Intelligence
+              Artificielle pour optimiser les processus métiers.
             </p>
             <div
               class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in"
@@ -281,24 +264,25 @@
               <a
                 href="#contact"
                 class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition hover:scale-105 duration-300 ease-in-out"
+                >Contactez-moi</a
               >
-                Contactez-moi
-              </a>
             </div>
           </div>
-          <!-- Colonne Droite -->
           <div class="w-full md:w-2/5 py-6 text-center">
             <img
               class="w-full md:w-4/5 z-50 rounded-full shadow-2xl mx-auto"
               src="https://placehold.co/400x400/0a192f/FFFFFF?text=KSF.Y"
               alt="Photo de Konan Franck Schalôm YAO"
-              onerror="this.onerror=null;this.src='https://placehold.co/400x400/0a192f/FFFFFF?text=KSF.Y';"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/400x400/0a192f/FFFFFF?text=KSF.Y';
+              "
             />
           </div>
         </div>
       </section>
 
-      <!-- Section À Propos -->
       <section id="about" class="py-20 bg-[#0b1f3d]">
         <div class="container mx-auto px-6">
           <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
@@ -307,23 +291,23 @@
           <div class="flex flex-wrap items-center">
             <div class="w-full md:w-1/2 text-lg px-4 slide-in-left">
               <p class="mb-4">
-                Passionné par l'intersection entre les réseaux, la cybersécurité
-                et le design d'applications, je suis un professionnel polyvalent
-                basé à Abidjan. Avec un Master en Cybersécurité & IoT, je
-                conçois des architectures systèmes robustes et sécurisées.
+                Passionné par l'intersection entre l'administration système, la
+                cybersécurité et l'automatisation, je suis un professionnel
+                polyvalent basé à Abidjan. Avec un Master en Cybersécurité &
+                IoT, je conçois des architectures systèmes robustes et hautement
+                sécurisées.
               </p>
               <p class="mb-4">
-                En tant que CEO de Softskills, je pilote des projets innovants
-                de A à Z, de la relation client à la gestion des équipes, en
-                passant par le design UI/UX. Mon expérience en tant que Service
-                Engineer chez Biolab m'a permis de développer une forte
-                expertise en maintenance et en support technique d'équipements
-                de laboratoire médical.
+                Je suis capable d'intervenir sur toute la chaîne de valeur : du
+                déploiement de serveurs VPS sous Linux à la conteneurisation
+                (Docker), en passant par la création d'outils de détection
+                d'intrusions (NIDS) et l'intégration d'IA locales via des
+                workflows complexes (n8n).
               </p>
               <p>
-                Je suis constamment en quête de nouveaux défis pour mettre à
-                profit mes compétences et créer des solutions technologiques qui
-                ont un impact réel.
+                Mon approche de l'ingénierie vise à réduire les tâches
+                chronophages et à augmenter la résilience des infrastructures
+                face aux menaces actuelles.
               </p>
             </div>
             <div class="w-full md:w-1/2 px-4 mt-10 md:mt-0 slide-in-right">
@@ -363,31 +347,26 @@
         </div>
       </section>
 
-      <!-- Section Expérience -->
       <section id="experience" class="py-20">
         <div class="container mx-auto px-6">
           <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
             Expérience Professionnelle
           </h2>
           <div class="relative">
-            <!-- Vertical Line -->
             <div
               class="absolute top-0 h-full w-1 bg-indigo-700 bg-opacity-20 left-4 top-0 md:left-1/2 md:-translate-x-1/2"
             ></div>
 
-            <!-- Timeline Item 1 -->
             <div class="relative mb-12">
-              <!-- Circle -->
               <div
                 class="absolute z-10 flex items-center justify-center w-8 h-8 bg-indigo-800 rounded-full shadow-xl left-4 top-1 md:left-1/2 md:-translate-x-1/2"
               >
                 <h1 class="text-lg font-semibold text-white">1</h1>
               </div>
-              <!-- Card -->
               <div class="w-full pl-16 md:pl-0 md:w-5/12 md:ml-auto md:pr-8">
                 <div class="glass-effect rounded-lg shadow-xl px-6 py-4">
                   <h3 class="mb-3 font-bold text-white text-xl md:text-right">
-                    Service Engineer
+                    Service Engineer & Admin Sys
                   </h3>
                   <p
                     class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 md:text-right"
@@ -398,30 +377,34 @@
                     class="mt-2 list-disc list-inside text-left text-gray-400"
                   >
                     <li>
-                      Installation et maintenance d'équipements biomédicaux.
+                      Administration système et serveur de l'infrastructure
+                      globale.
                     </li>
-                    <li>Formation du personnel de laboratoire.</li>
                     <li>
-                      Gestion du parc informatique et administration système.
+                      Gestion sécurisée du parc informatique de l'entreprise.
+                    </li>
+                    <li>
+                      Installation, entretien et suivi des équipements
+                      biomédicaux (Roche, Merck, Illumina).
+                    </li>
+                    <li>
+                      Assistance et formation du personnel de laboratoire.
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Timeline Item 2 -->
             <div class="relative mb-12">
-              <!-- Circle -->
               <div
                 class="absolute z-10 flex items-center justify-center w-8 h-8 bg-indigo-800 rounded-full shadow-xl left-4 top-1 md:left-1/2 md:-translate-x-1/2"
               >
                 <h1 class="text-lg font-semibold text-white">2</h1>
               </div>
-              <!-- Card -->
               <div class="w-full pl-16 md:pl-8 md:w-5/12">
                 <div class="glass-effect rounded-lg shadow-xl px-6 py-4">
                   <h3 class="mb-3 font-bold text-white text-xl">
-                    Chief Executive Officer (CEO)
+                    Chef de Projet & Développeur Web
                   </h3>
                   <p
                     class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100"
@@ -432,14 +415,14 @@
                     class="mt-2 list-disc list-inside text-left text-gray-400"
                   >
                     <li>
-                      Gestion de la relation client et de la stratégie
-                      d'entreprise.
+                      Responsable administratif et pilotage de projets
+                      numériques.
                     </li>
-                    <li>Conception UI/UX et Web Design.</li>
                     <li>
-                      Management des ressources humaines et administratives.
+                      Administration Système et intégration d'outils
+                      d'automatisation (n8n).
                     </li>
-                    <li>Administration des systèmes et serveurs.</li>
+                    <li>UI/UX et Web Design (React.js, Laravel).</li>
                   </ul>
                 </div>
               </div>
@@ -448,7 +431,6 @@
         </div>
       </section>
 
-      <!-- Section Formation & Certifications -->
       <section id="education" class="py-20 bg-[#0b1f3d]">
         <div class="container mx-auto px-6">
           <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
@@ -511,7 +493,6 @@
         </div>
       </section>
 
-      <!-- Section Compétences -->
       <section id="skills" class="py-20">
         <div class="container mx-auto px-6">
           <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
@@ -520,74 +501,216 @@
           <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center"
           >
-            <!-- Compétence 1 -->
+            <div class="skill-card p-6 glass-effect rounded-lg">
+              <i class="fas fa-network-wired text-5xl text-indigo-400 mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">Réseaux & Cybersécurité</h3>
+              <p class="text-gray-400">
+                Architecture, configuration (Cisco), analyse de trafic (Scapy)
+                et sécurisation des infrastructures face aux menaces.
+              </p>
+            </div>
+
+            <div class="skill-card p-6 glass-effect rounded-lg">
+              <i class="fas fa-server text-5xl text-indigo-400 mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">DevSecOps & Admin Sys</h3>
+              <p class="text-gray-400">
+                Gestion de serveurs Linux (VPS), conteneurisation (Docker),
+                reverse proxy et administration de bases de données
+                (PostgreSQL).
+              </p>
+            </div>
+
+            <div class="skill-card p-6 glass-effect rounded-lg">
+              <i class="fas fa-robot text-5xl text-indigo-400 mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">Automatisation & IA</h3>
+              <p class="text-gray-400">
+                Création de workflows (n8n), intégration d'API REST et
+                déploiement de modèles LLM locaux (Ollama) pour optimiser les
+                processus.
+              </p>
+            </div>
+
             <div class="skill-card p-6 glass-effect rounded-lg">
               <i class="fas fa-tasks text-5xl text-indigo-400 mb-4"></i>
               <h3 class="text-xl font-bold mb-2">Gestion de Projet Tech</h3>
               <p class="text-gray-400">
-                Pilotage de projets web de la conception à la mise en
+                Pilotage de projets d'ingénierie de la conception à la mise en
                 production, gestion d'équipe et relation client.
               </p>
             </div>
-            <!-- Compétence 2 -->
+
             <div class="skill-card p-6 glass-effect rounded-lg">
               <i
                 class="fas fa-drafting-compass text-5xl text-indigo-400 mb-4"
               ></i>
               <h3 class="text-xl font-bold mb-2">UI/UX & Web Design</h3>
               <p class="text-gray-400">
-                Création d'interfaces utilisateur intuitives et d'expériences
-                engageantes, centrées sur les besoins de l'utilisateur.
+                Création d'interfaces utilisateur intuitives et développement
+                web (React.js, Laravel) centrés sur l'expérience client.
               </p>
             </div>
-            <!-- Compétence 3 -->
-            <div class="skill-card p-6 glass-effect rounded-lg">
-              <i class="fas fa-network-wired text-5xl text-indigo-400 mb-4"></i>
-              <h3 class="text-xl font-bold mb-2">Réseaux & Cybersécurité</h3>
-              <p class="text-gray-400">
-                Architecture, configuration (Cisco) et sécurisation des
-                infrastructures réseau et des applications web.
-              </p>
-            </div>
-            <!-- Compétence 4 -->
-            <div class="skill-card p-6 glass-effect rounded-lg">
-              <i class="fas fa-server text-5xl text-indigo-400 mb-4"></i>
-              <h3 class="text-xl font-bold mb-2">Administration Système</h3>
-              <p class="text-gray-400">
-                Gestion et maintenance de serveurs (Linux), déploiement
-                d'applications et gestion de parc informatique.
-              </p>
-            </div>
-            <!-- Compétence 5 -->
+
             <div class="skill-card p-6 glass-effect rounded-lg">
               <i class="fas fa-briefcase text-5xl text-indigo-400 mb-4"></i>
               <h3 class="text-xl font-bold mb-2">Gestion d'Entreprise</h3>
               <p class="text-gray-400">
                 Management des ressources humaines, gestion administrative,
-                comptabilité et stratégie de croissance.
-              </p>
-            </div>
-            <!-- Compétence 6 -->
-            <div class="skill-card p-6 glass-effect rounded-lg">
-              <i class="fas fa-headset text-5xl text-indigo-400 mb-4"></i>
-              <h3 class="text-xl font-bold mb-2">Support Technique</h3>
-              <p class="text-gray-400">
-                Expertise en maintenance, support et formation sur des
-                équipements de laboratoire médical.
+                comptabilité et stratégie de croissance d'entreprise.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Section Portfolio -->
       <section id="portfolio" class="py-20 bg-[#0b1f3d]">
         <div class="container mx-auto px-6">
           <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
-            Projets Pilotés
+            Projets Récents & Réalisations
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- Projet 1: SIHIOTS -->
+            <div
+              class="project-card glass-effect rounded-lg overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-300 flex flex-col"
+            >
+              <img
+                class="w-full h-56 object-cover"
+                src="https://placehold.co/600x400/0b1f3d/a78bfa?text=NetGuard+Pro"
+                alt="NetGuard Pro"
+                loading="lazy"
+              />
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold mb-2 text-indigo-400">
+                  NetGuard Pro (NIDS Distribué)
+                </h3>
+                <div class="flex flex-wrap mb-4">
+                  <span
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >Python (FastAPI/Scapy)</span
+                  >
+                  <span
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >Docker</span
+                  >
+                  <span
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >PostgreSQL</span
+                  >
+                </div>
+                <p class="text-gray-400 mb-4">
+                  Développement complet d'une plateforme de supervision réseau
+                  et de détection d'intrusions (Port Scan, SYN Flood) intégrant
+                  des agents distribués qui communiquent via des Sockets TCP
+                  asynchrones.
+                </p>
+                <p class="text-gray-300 font-semibold">
+                  Impact : Surveillance en temps réel, sécurisation proactive du
+                  réseau et déclenchement d'alertes SMTP automatiques.
+                </p>
+                <div class="mt-auto pt-4">
+                  <a
+                    href="https://github.com/The-Ghost03"
+                    target="_blank"
+                    class="inline-block text-indigo-400 border border-indigo-400 py-2 px-4 rounded-full hover:bg-indigo-400 hover:text-white transition-colors duration-300"
+                    >Voir le Code <i class="fab fa-github ml-2"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="project-card glass-effect rounded-lg overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-300 flex flex-col"
+            >
+              <img
+                class="w-full h-56 object-cover"
+                src="https://placehold.co/600x400/0b1f3d/a78bfa?text=Agent+IA+Softskills"
+                alt="Agent IA Softskills"
+                loading="lazy"
+              />
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold mb-2 text-indigo-400">
+                  Agent IA Softskills
+                </h3>
+                <div class="flex flex-wrap mb-4">
+                  <span
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >n8n</span
+                  >
+                  <span
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >Ollama (Mistral)</span
+                  >
+                  <span
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >API REST</span
+                  >
+                </div>
+                <p class="text-gray-400 mb-4">
+                  Conception et déploiement d'un workflow automatisé pour la
+                  qualification des leads. Un algorithme (JavaScript) évalue la
+                  viabilité financière, puis un modèle IA local génère la
+                  proposition commerciale.
+                </p>
+                <p class="text-gray-300 font-semibold">
+                  Impact : Automatisation du cycle de vente de bout-en-bout et
+                  souveraineté totale des données clients (auto-hébergement).
+                </p>
+                <div class="mt-auto pt-4">
+                  <a
+                    href="#"
+                    class="inline-block text-gray-500 border border-gray-500 py-2 px-4 rounded-full cursor-not-allowed"
+                    >Projet d'entreprise <i class="fas fa-lock ml-2"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="project-card glass-effect rounded-lg overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-300 flex flex-col"
+            >
+              <img
+                class="w-full h-56 object-cover"
+                src="https://placehold.co/600x400/0b1f3d/a78bfa?text=Veille+%26+Prospection"
+                alt="Agent IA Prospection"
+                loading="lazy"
+              />
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold mb-2 text-indigo-400">
+                  Agent IA de Prospection IT
+                </h3>
+                <div class="flex flex-wrap mb-4">
+                  <span
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >Automatisation</span
+                  >
+                  <span
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >JSON / API JSearch</span
+                  >
+                  <span
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >Prompt Engineering</span
+                  >
+                </div>
+                <p class="text-gray-400 mb-4">
+                  Création d'un pipeline d'extraction automatisé. L'outil
+                  interroge les bases de données d'emploi via API, analyse les
+                  offres (SOC/Réseaux) et rédige des e-mails de candidature
+                  ciblés via un LLM.
+                </p>
+                <p class="text-gray-300 font-semibold">
+                  Impact : Veille technologique et opportunités professionnelles
+                  qualifiées sans action manuelle.
+                </p>
+                <div class="mt-auto pt-4">
+                  <a
+                    href="https://github.com/The-Ghost03"
+                    target="_blank"
+                    class="inline-block text-indigo-400 border border-indigo-400 py-2 px-4 rounded-full hover:bg-indigo-400 hover:text-white transition-colors duration-300"
+                    >Voir le Workflow <i class="fab fa-github ml-2"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
             <div
               class="project-card glass-effect rounded-lg overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-300 flex flex-col"
             >
@@ -603,22 +726,22 @@
                 </h3>
                 <div class="flex flex-wrap mb-4">
                   <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
                     >React.js</span
                   >
                   <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
                     >Laravel</span
                   >
                   <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
                     >Gestion de Projet</span
                   >
                 </div>
                 <p class="text-gray-400 mb-4">
-                  Conception et pilotage de la création d'une plateforme web
-                  pour la SIHIOTS, incluant un espace membre sécurisé, une
-                  bibliothèque numérique et des parcours de formation.
+                  Conception et pilotage d'une plateforme web pour la SIHIOTS,
+                  incluant un espace membre sécurisé, une bibliothèque numérique
+                  et des parcours de formation.
                 </p>
                 <p class="text-gray-300 font-semibold">
                   Impact : Diffusion du savoir médical et engagement de la
@@ -636,7 +759,6 @@
               </div>
             </div>
 
-            <!-- Projet 2: JK LOGISTIQUE -->
             <div
               class="project-card glass-effect rounded-lg overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-300 flex flex-col"
             >
@@ -652,15 +774,15 @@
                 </h3>
                 <div class="flex flex-wrap mb-4">
                   <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
                     >UI/UX Design</span
                   >
                   <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
                     >SEO</span
                   >
                   <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
                     >React.js</span
                   >
                 </div>
@@ -670,8 +792,8 @@
                   pour une visibilité maximale.
                 </p>
                 <p class="text-gray-300 font-semibold">
-                  Point fort : Génération de leads qualifiés via un formulaire
-                  de contact performant.
+                  Impact : Génération de leads qualifiés via un formulaire de
+                  contact performant.
                 </p>
                 <div class="mt-auto pt-4">
                   <a
@@ -685,7 +807,6 @@
               </div>
             </div>
 
-            <!-- Projet 3: ONG Hope & Faith -->
             <div
               class="project-card glass-effect rounded-lg overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-300 flex flex-col"
             >
@@ -697,23 +818,19 @@
               />
               <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-2xl font-bold mb-2 text-indigo-400">
-                  Site Web ONG Hope & Faith (HoFa)
+                  Site Web ONG HoFa
                 </h3>
                 <div class="flex flex-wrap mb-4">
                   <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
                     >Gestion de Projet</span
                   >
                   <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
-                    >Accessibilité</span
-                  >
-                  <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
                     >Laravel</span
                   >
                   <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
                     >React.js</span
                   >
                 </div>
@@ -723,8 +840,8 @@
                   la portée de l'ONG.
                 </p>
                 <p class="text-gray-300 font-semibold">
-                  Point fort : Amélioration de l'engagement des membres et des
-                  donateurs.
+                  Impact : Amélioration notable de l'engagement des membres et
+                  des donateurs.
                 </p>
                 <div class="mt-auto pt-4">
                   <a
@@ -737,63 +854,10 @@
                 </div>
               </div>
             </div>
-
-            <!-- Projet 4: Divine Voyage et Tourisme -->
-            <div
-              class="project-card glass-effect rounded-lg overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-300 flex flex-col"
-            >
-              <img
-                class="w-full h-56 object-cover"
-                src="img/divine.webp"
-                alt="Image du projet Divine Voyage et Tourisme"
-                loading="lazy"
-              />
-              <div class="p-6 flex flex-col flex-grow">
-                <h3 class="text-2xl font-bold mb-2 text-indigo-400">
-                  Divine Voyage et Tourisme
-                </h3>
-                <div class="flex flex-wrap mb-4">
-                  <span
-                    class="bg-yellow-900 text-yellow-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
-                    >En cours</span
-                  >
-                  <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
-                    >Web Design</span
-                  >
-                  <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
-                    >Gestion de Projet</span
-                  >
-                  <span
-                    class="bg-indigo-900 text-indigo-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
-                    >Business</span
-                  >
-                </div>
-                <p class="text-gray-400 mb-4">
-                  Pilotage du développement d'une plateforme complète de
-                  réservation de voyages (vols, hôtels, voitures) avec espace
-                  client, blog et back-office de gestion.
-                </p>
-                <p class="text-gray-300 font-semibold">
-                  Objectif : Offrir une expérience de réservation fluide et
-                  centralisée pour les voyageurs.
-                </p>
-                <div class="mt-auto pt-4">
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="inline-block text-gray-500 border border-gray-500 py-2 px-4 rounded-full cursor-not-allowed"
-                    >Site en construction <i class="fas fa-wrench ml-2"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <!-- Section Contact -->
       <section id="contact" class="py-20">
         <div class="container mx-auto px-6">
           <div class="max-w-3xl mx-auto text-center">
@@ -856,7 +920,6 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-[#0b1f3d] py-8">
       <div class="container mx-auto px-6 text-center">
         <div class="flex justify-center mb-4">
@@ -886,10 +949,9 @@
       </div>
     </footer>
 
-    <!-- Toast Notification -->
     <div
       id="toast"
-      class="fixed bottom-5 right-5 bg-green-600 text-white py-3 px-5 rounded-lg shadow-lg"
+      class="fixed bottom-5 right-5 bg-green-600 text-white py-3 px-5 rounded-lg shadow-lg z-50"
     >
       <i class="fas fa-check-circle mr-2"></i> Message envoyé avec succès !
     </div>
@@ -904,7 +966,6 @@
       document.querySelectorAll("#nav-content a").forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           if (window.innerWidth < 1024) {
-            // lg breakpoint
             document.getElementById("nav-content").classList.add("hidden");
           }
         });
@@ -926,19 +987,14 @@
         origin: "bottom",
       });
       sr.reveal("#hero img", { delay: 700, origin: "right" });
-
       sr.reveal(".slide-in-left", { origin: "left" });
       sr.reveal(".slide-in-right", { origin: "right" });
-
       sr.reveal(".timeline-card-right", { origin: "right", interval: 300 });
       sr.reveal(".timeline-card-left", { origin: "left", interval: 300 });
-
       sr.reveal(".education-card", { origin: "left", delay: 200 });
       sr.reveal(".certif-card", { origin: "right", delay: 200 });
-
       sr.reveal(".skill-card", { interval: 200, origin: "bottom" });
       sr.reveal(".project-card", { interval: 200, origin: "bottom" });
-
       sr.reveal("#contact h2, #contact p, #contact form", { origin: "bottom" });
 
       // Script pour le formulaire de contact avec Toast
@@ -969,12 +1025,10 @@
               }, 4000);
               contactForm.reset();
             } else {
-              // Gérer les erreurs ici si nécessaire
               alert("Une erreur s'est produite. Veuillez réessayer.");
             }
           })
           .catch((error) => {
-            // Gérer les erreurs réseau
             alert("Une erreur réseau s'est produite. Veuillez réessayer.");
           })
           .finally(() => {
@@ -984,7 +1038,6 @@
       });
 
       // Script pour le suivit de section avec les liens du menu
-
       document.addEventListener("DOMContentLoaded", function () {
         const mapping = {
           about: ["hero", "about"],
