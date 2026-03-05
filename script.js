@@ -61,6 +61,30 @@ const personalProjects = [
 
 const agencyProjects = [
   {
+    title_fr: "Site Web et Application Mobile Smartsaver",
+    title_en: "Smartsaver Website and Mobile Application",
+    link: "https://www.smartsaver.ci/",
+    img: "img/smartsaver.webp",
+    desc_fr:
+      "Conception et pilotage de la création d'une application mobile avec une landing page pour la start-up Smartsaver. Cette application permet la gestion d'épargnes et tontines numerique et gère plus de 500 utilisateurs.",
+    desc_en:
+      "Design and management of the creation of a mobile application with a landing page for the start-up Smartsaver. This application enables the management of digital savings and tontines and manages more than 500 users.",
+    techs_fr: ["Flutter", "Laravel", "Gestion de Projet"],
+    techs_en: ["Flutter", "Laravel", "Project Management"],
+  },
+  {
+    title_fr: "Site Web ONG Hope & Faith (HoFa)",
+    title_en: "Hope & Faith (HoFa) NGO Website",
+    link: "https://hofa-ci.org/",
+    img: "img/hofa.webp",
+    desc_fr:
+      "Pilotage de la conception d'un site institutionnel avec espace membre, bibliothèque numérique et SEO dynamique pour accroître la portée de l'ONG. Point fort : Amélioration de l'engagement des membres et des donateurs.",
+    desc_en:
+      "Led the design of a corporate website with a member area, digital library, and dynamic SEO to increase the NGO's reach. Key point: Improved member and donor engagement.",
+    techs_fr: ["Gestion de Projet", "Accessibilité", "Laravel", "React.js"],
+    techs_en: ["Project Management", "Accessibility", "Laravel", "React.js"],
+  },
+  {
     title_fr: "Plateforme SIHIOTS",
     title_en: "SIHIOTS Platform",
     link: "https://www.sihiots.hbc-ci.com/",
@@ -83,18 +107,6 @@ const agencyProjects = [
       "Managed the creation of a modern showcase website with clean UX, secure forms, and an SEO strategy for maximum visibility. Key point: Qualified lead generation via an efficient contact form.",
     techs_fr: ["UI/UX Design", "SEO", "React.js"],
     techs_en: ["UI/UX Design", "SEO", "React.js"],
-  },
-  {
-    title_fr: "Site Web ONG Hope & Faith (HoFa)",
-    title_en: "Hope & Faith (HoFa) NGO Website",
-    link: "https://hofa-ci.org/",
-    img: "img/hofa.webp",
-    desc_fr:
-      "Pilotage de la conception d'un site institutionnel avec espace membre, bibliothèque numérique et SEO dynamique pour accroître la portée de l'ONG. Point fort : Amélioration de l'engagement des membres et des donateurs.",
-    desc_en:
-      "Led the design of a corporate website with a member area, digital library, and dynamic SEO to increase the NGO's reach. Key point: Improved member and donor engagement.",
-    techs_fr: ["Gestion de Projet", "Accessibilité", "Laravel", "React.js"],
-    techs_en: ["Project Management", "Accessibility", "Laravel", "React.js"],
   },
   {
     title_fr: "Divine Voyage et Tourisme",
